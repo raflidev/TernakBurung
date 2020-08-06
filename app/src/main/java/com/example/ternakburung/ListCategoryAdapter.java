@@ -3,6 +3,7 @@ package com.example.ternakburung;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -16,8 +17,13 @@ import java.util.ArrayList;
 
 public class ListCategoryAdapter extends RecyclerView.Adapter<ListCategoryAdapter.ListViewHolder> {
 
-    private ArrayList<Category> listCategory;
+    private OnItemClickCallback onItemClickCallback;
 
+    public void setOnItemClickCallback(OnItemClickCallback onItemClickCallback){
+        this.onItemClickCallback = onItemClickCallback;
+    }
+
+    private ArrayList<Category> listCategory;
     public ListCategoryAdapter(ArrayList<Category> list){
         this.listCategory = list;
     }
@@ -30,13 +36,24 @@ public class ListCategoryAdapter extends RecyclerView.Adapter<ListCategoryAdapte
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ListViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull final ListViewHolder holder, int position) {
         Category category = listCategory.get(position);
         Glide.with(holder.itemView.getContext())
                 .load(category.getGambar())
                 .apply(new RequestOptions().override(300,180))
                 .into(holder.tvImage);
         holder.tvName.setText(category.getNama());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                onItemClickCallback.onItemClicked(listCategory.get(holder.getAdapterPosition()));
+            }
+        });
+    }
+
+    public interface OnItemClickCallback{
+        void onItemClicked(Category data);
     }
 
     @Override

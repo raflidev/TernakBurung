@@ -11,6 +11,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -32,6 +34,7 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
+        Toast.makeText(getActivity(), "FB pressed", Toast.LENGTH_LONG).show();
 
 
         // Inflate the layout for this fragment
@@ -43,14 +46,28 @@ public class HomeFragment extends Fragment {
 
         list.addAll(BirdData.getListData());
         showRecyclerList();
+
         return v;
+
     }
-
-
 
     private void showRecyclerList() {
         rvCategory.setLayoutManager(new LinearLayoutManager(getActivity()));
         ListCategoryAdapter listCategoryAdapter = new ListCategoryAdapter(list);
         rvCategory.setAdapter(listCategoryAdapter);
+
+        listCategoryAdapter.setOnItemClickCallback(new ListCategoryAdapter.OnItemClickCallback(){
+           @Override
+           public void onItemClicked(Category data){
+               showSelectedCategory(data);
+           }
+        });
+
+
     }
+
+    private void showSelectedCategory(Category category){
+        Toast.makeText(getActivity(), "you pressed " + category.getNama(), Toast.LENGTH_LONG).show();
+    }
+
 }
