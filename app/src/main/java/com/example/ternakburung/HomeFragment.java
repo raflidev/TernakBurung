@@ -2,6 +2,7 @@ package com.example.ternakburung;
 
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -34,7 +35,7 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        Toast.makeText(getActivity(), "FB pressed", Toast.LENGTH_LONG).show();
+//        Toast.makeText(getActivity(), "FB pressed", Toast.LENGTH_LONG).show();
 
 
         // Inflate the layout for this fragment
@@ -67,7 +68,32 @@ public class HomeFragment extends Fragment {
     }
 
     private void showSelectedCategory(Category category){
-        Toast.makeText(getActivity(), "you pressed " + category.getNama(), Toast.LENGTH_LONG).show();
+
+        Intent test = new Intent(getActivity(),DetailBurung.class);
+        switch(category.getNama()){
+
+            case "Perkutut":
+                Toast.makeText(getActivity(), "bagus", Toast.LENGTH_LONG).show();
+                test.putExtra(DetailBurung.EXTRA_CATEGORY, "Perkutut");
+                startActivity(test);
+                break;
+            case "Tekukur":
+                Toast.makeText(getActivity(), "bagus", Toast.LENGTH_LONG).show();
+                test.putExtra(DetailBurung.EXTRA_CATEGORY, "Tekukur");
+                startActivity(test);
+                break;
+            case "Love bird":
+                Toast.makeText(getActivity(), "bagus", Toast.LENGTH_LONG).show();
+                test.putExtra(DetailBurung.EXTRA_CATEGORY, "Love bird");
+                startActivity(test);
+                break;
+            case "Dara":
+                Toast.makeText(getActivity(), "bagus", Toast.LENGTH_LONG).show();
+                test.putExtra(DetailBurung.EXTRA_CATEGORY, "Dara");
+                startActivity(test);
+                break;
+        }
+//        Toast.makeText(getActivity(), "you pressed " + category.getNama(), Toast.LENGTH_LONG).show();
     }
 
 }
