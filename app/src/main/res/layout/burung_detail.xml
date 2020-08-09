@@ -6,12 +6,23 @@
     android:background="#FFC107"
     android:layout_height="match_parent">
 
+
     <TextView
         android:id="@+id/test_putextra"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:layout_marginTop="6dp"
+        android:fontFamily="@font/semibold"
+        android:text="test"
+        android:padding="16dp"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"/>
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/item_detail" />
 
 
 

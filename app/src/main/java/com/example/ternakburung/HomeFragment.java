@@ -63,37 +63,34 @@ public class HomeFragment extends Fragment {
                showSelectedCategory(data);
            }
         });
-
-
     }
 
     private void showSelectedCategory(Category category){
 
-        Intent test = new Intent(getActivity(),DetailBurung.class);
+        Intent detail = new Intent(getActivity(),DetailBurung.class);
         switch(category.getNama()){
 
             case "Perkutut":
-                Toast.makeText(getActivity(), "bagus", Toast.LENGTH_LONG).show();
-                test.putExtra(DetailBurung.EXTRA_CATEGORY, "Perkutut");
-                startActivity(test);
+                Toast.makeText(getActivity(), category.getNama(), Toast.LENGTH_LONG).show();
+                detail.putExtra(DetailBurung.EXTRA_CATEGORY, "Perkutut");
+                startActivity(detail);
                 break;
             case "Tekukur":
-                Toast.makeText(getActivity(), "bagus", Toast.LENGTH_LONG).show();
-                test.putExtra(DetailBurung.EXTRA_CATEGORY, "Tekukur");
-                startActivity(test);
+                Toast.makeText(getActivity(), category.getNama(), Toast.LENGTH_LONG).show();
+                detail.putExtra(DetailBurung.EXTRA_CATEGORY, "Tekukur");
+                startActivity(detail);
                 break;
             case "Love bird":
-                Toast.makeText(getActivity(), "bagus", Toast.LENGTH_LONG).show();
-                test.putExtra(DetailBurung.EXTRA_CATEGORY, "Love bird");
-                startActivity(test);
+                Toast.makeText(getActivity(), category.getNama(), Toast.LENGTH_LONG).show();
+                detail.putExtra(DetailBurung.EXTRA_CATEGORY, "Love bird");
+                startActivity(detail);
                 break;
             case "Dara":
-                Toast.makeText(getActivity(), "bagus", Toast.LENGTH_LONG).show();
-                test.putExtra(DetailBurung.EXTRA_CATEGORY, "Dara");
-                startActivity(test);
+                Toast.makeText(getActivity(), category.getNama(), Toast.LENGTH_LONG).show();
+                detail.putExtra(DetailBurung.EXTRA_CATEGORY, "Dara");
+                startActivity(detail);
                 break;
         }
-//        Toast.makeText(getActivity(), "you pressed " + category.getNama(), Toast.LENGTH_LONG).show();
     }
 
 }

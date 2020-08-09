@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="16dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/gambar_burung"
+                    android:layout_width="match_parent"
+                    android:layout_height="147dp"
+                    android:layout_margin="1dp"
+                    android:scaleType="centerCrop"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginLeft="25dp"
+                    tools:src="@color/colorAccent" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="126dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="@font/semibold"
+                    android:text="NO RING :"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/no_ring"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/semibold"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    tools:text="@string/app_name" />
+        </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="126dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:fontFamily="@font/semibold"
+                            android:maxLines="2"
+                            android:text="NETAS :"
+                            android:textColor="@android:color/black"
+                            android:textSize="18sp" />
+                        <TextView
+                            android:id="@+id/netas"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/semibold"
+                            android:maxLines="2"
+                            android:textColor="@android:color/black"
+                            android:textSize="18sp"
+                            tools:text="@string/app_name" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="126dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:fontFamily="@font/semibold"
+                            android:maxLines="2"
+                            android:text="KANDANG :"
+                            android:textColor="@android:color/black"
+                            android:textSize="18sp" />
+                        <TextView
+                            android:id="@+id/kandang"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/semibold"
+                            android:maxLines="2"
+                            android:textColor="@android:color/black"
+                            android:textSize="18sp"
+                            tools:text="@string/app_name" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="126dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:fontFamily="@font/semibold"
+                            android:maxLines="2"
+                            android:text="JANTAN :"
+                            android:textColor="@android:color/black"
+                            android:textSize="18sp" />
+                        <TextView
+                            android:id="@+id/jantanan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/semibold"
+                            android:maxLines="2"
+                            android:textColor="@android:color/black"
+                            android:textSize="18sp"
+                            tools:text="@string/app_name" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="126dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:fontFamily="@font/semibold"
+                            android:maxLines="2"
+                            android:text="BETINA :"
+                            android:textColor="@android:color/black"
+                            android:textSize="18sp" />
+                        <TextView
+                            android:id="@+id/betina"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/semibold"
+                            android:maxLines="2"
+                            android:textColor="@android:color/black"
+                            android:textSize="18sp"
+                            tools:text="@string/app_name" />
+                </LinearLayout>
+
+
+
+
+
+
+        </LinearLayout>
+</RelativeLayout>
